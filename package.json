@@ -1,0 +1,26 @@
+{
+  "name": "bowling-evaluation",
+  "version": "1.0.0",
+  "description": "Bowling evaluation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohinivsenthil/bowling-evaluation.git"
+  },
+  "keywords": [
+    "evaluation"
+  ],
+  "author": "Rohini Senthil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohinivsenthil/bowling-evaluation/issues"
+  },
+  "homepage": "https://github.com/rohinivsenthil/bowling-evaluation#readme",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0"
+  }
+}
