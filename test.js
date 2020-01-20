@@ -1,7 +1,7 @@
 let totalScore = 0;
 
 function roll(pinsKnocked){
-	//totalScore += pinsKnocked;
+	totalScore += pinsKnocked;
 }
 
 function score(){
@@ -9,9 +9,9 @@ function score(){
 }
 
 function bowlingGame(inputThrows){
-	// for(let i =0; i<inputThrows.length; i++){
-	// 	roll(inputThrows[i]);
-	// }
+	for(let i =0; i<inputThrows.length; i++){
+		roll(inputThrows[i]);
+	}
     
 	return score();
 }
