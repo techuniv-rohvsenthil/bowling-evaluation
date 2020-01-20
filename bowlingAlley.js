@@ -18,8 +18,12 @@ function bowlingGame(inputThrows){
 	for(let i = 0; i < totalThrows; i++){
 
 		//set is updated with each throw
-		if(set == 2){set = 1;}
-		else{set++;}
+		if(set == 2){
+			set = 1;
+		}
+		else{
+			set++;
+		}
 
 		//if the throw is a spare
 		if(set == 2){

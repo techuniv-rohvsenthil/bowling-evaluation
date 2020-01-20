@@ -37,9 +37,15 @@ describe('the bowlingGame function', () => {
 
 	//different test case: when strike is thrown in the second slot of set - it is a spare
 	it('should return the expected throw when a strike is made: add the next two throw scores to current score', () => {
-		const result = bowlingGame([0, 0, 0, 10, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+		const result = bowlingGame([0, 0, 0, 10, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 		expect(result).toBe(17);
 	});
+
+	//invalid argument
+	// it('should return "More throws expected."', () => {
+	// 	const result = bowlingGame([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+	// 	expect(result).toBe('More throws expected.');
+	// });
     
     
 
