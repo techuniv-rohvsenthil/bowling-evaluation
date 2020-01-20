@@ -24,16 +24,16 @@ describe('the bowlingGame function', () => {
 		expect(result).toBe(20);
 	});
 
-	//different test case: when strike is thrown in the second set
-	it('should return the expected throw when a strike is made: add the next two throw scores to current score', () => {
-		const result = bowlingGame([0, 0, 0, 10, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-		expect(result).toBe(20);
+	it('should return the expected throw when a spare is made: add the next one throw score to current score', () => {
+		const result = bowlingGame([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+		expect(result).toBe(16);
 	});
 
-	// it('should return the expected throw when a spare is made: add the next one throw score to current score', () => {
-	// 	const result = bowlingGame([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-	// 	expect(result).toBe(16);
-	// });
+	//different test case: when strike is thrown in the second slot of set - it is a spare
+	it('should return the expected throw when a strike is made: add the next two throw scores to current score', () => {
+		const result = bowlingGame([0, 0, 0, 10, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+		expect(result).toBe(17);
+	});
     
     
 

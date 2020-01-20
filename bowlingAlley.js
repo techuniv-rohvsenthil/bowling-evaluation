@@ -1,6 +1,5 @@
 let totalScore = 0;
 let totalThrows = 20;
-let set = 0;
 
 function roll(pinsKnocked){
 	totalScore = totalScore + pinsKnocked;
@@ -13,21 +12,24 @@ function score(){
 }
 
 function bowlingGame(inputThrows){
+	let set = 0;
+	
 	for(let i = 0; i < totalThrows; i++){
 
+		if(set == 2){set = 1;}
+		else{set++;}
+
 		if(set == 2){
-			set = 1;
+			if (inputThrows[i-1]+inputThrows[i] == 10){
+				roll(inputThrows[i]);
+				roll.call(null, inputThrows[i+1]);
+				continue;
+			}
+
 		}
-		else{
-			set++;
-		}
-
-		// if(set == 2 && (inputThrows[i-1]+inputThrows[i] ==10)){
-		// 	continue;
-		// }
-
-
+		
 		if(inputThrows[i] == 10){
+			console.log(set);
 			if(set == 1){
 				set++;
 				totalThrows--;
